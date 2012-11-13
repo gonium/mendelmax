@@ -1,0 +1,24 @@
+Der MendelMax soll mit einigen Modifikationen versehen werden:
+
+* Nur 8mm Stahlwellen
+* IGUS RJMP-01-08 Gleitlager: Diese sind größer als die LM8UU-Lager. 
+
+Der Kunststoffsatz von RepRap-Fab setzt dies um, ist momentan jedoch
+nicht verfügbar
+(http://reprap-fab.org/shop/product_info.php?products_id=84). Dort
+heisst es:
+
+---- %< -----
+Die X-Y-Z-Achse basiert auf den Teilen von Jonas Kühling.
+http://www.thingiverse.com/thing:18657
+http://www.thingiverse.com/thing:18384
+http://www.thingiverse.com/thing:16158
+www.thingiverse.com/thing:19127
+ 
+Ramen basiert auf:
+www.thingiverse.com/thing:12645
+
+plus
+www.thingiverse.com/thing:15861
+www.thingiverse.com/thing:14918
+---- %< -----
