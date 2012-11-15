@@ -10,15 +10,17 @@
 
 // include LM8UU holder slim
 // used module-dimensions via its variables: body_width, body_length
-include <lm8uu-holder-slim_v1-1.scad>;
+//include <rjmp0108-holder-slim_v1-1.scad>;
+include <../MD-RJMP-01-08-parametric/rjmp-01-08-holder-slim_v0.1.scad>
 holder_length = body_length;
 holder_width = body_width;
 
 
 // y axis dimensions
-rod_dist = 118;
+// MD: Adjusted for Y Rod Mount plate of MendelMax 1.0
+rod_dist = 100;
 
-// used from lm8uu-holder
+// used from rjmp0108-holder
 /* screw/nut dimensions (M3) - hexagon socket head cap screw ISO 4762, hexagon nut ISO 4032
 screw_thread_dia_iso = 3;
 screw_head_dia_iso = 5.5;
@@ -48,8 +50,8 @@ y_carriage();
 // main body
 module y_carriage(){
 
-	for(i=[-1,1]) translate([-(rod_dist/2),i*(frame_length/2-holder_length/2),0]) lm8uu_holder(1);
-	for(i=[-1,1]) translate([(rod_dist/2),i*(frame_length/2-holder_length/2),0]) rotate([0,0,180]) lm8uu_holder(1);
+	for(i=[-1,1]) translate([-(rod_dist/2),i*(frame_length/2-holder_length/2),0]) rjmp0108_holder(1);
+	for(i=[-1,1]) translate([(rod_dist/2),i*(frame_length/2-holder_length/2),0]) rotate([0,0,180]) rjmp0108_holder(1);
 
 	difference(){
 		translate([0,0,frame_height/2]) cube([rod_dist+8,frame_length-holder_length+8,frame_height],center=true);
