@@ -1,5 +1,8 @@
 use <jonaskuehling-default.scad>
-include <lm8uu-holder-slim_double-vertical.scad>
+include <rjmp0108-holder-slim_double-vertical.scad>
+// RENDER
+// "idler=false" for motor-x-end, "idler=true" for idler-x-end
+assembly(idler=false);
 
 // PARAMETERS
 rod_dia = 8;
@@ -55,10 +58,7 @@ bearing_support_height = leadscrew_nuttrap_height;
 idler_elevation = xend_body_height/2+rod_dia/2+belt_elevation+belt_height+idler_dia/2;
 
 
-// RENDER
-// "idler=false" for motor-x-end, "idler=true" for idler-x-end
 
-assembly(idler=true);
 
 // -------------------------------------------------
 
@@ -108,7 +108,7 @@ module bearing_holder(){
 	// linear bearing holder
 	translate([-zrod_leadscrew_dist/2,0,0])
 		rotate([0,0,90])
-			lm8uu_holder_slim_double_vertical();
+			rjmp0108_holder_slim_double_vertical();
 }
 
 module bearing_holder_spacer(){
