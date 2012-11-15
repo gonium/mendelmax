@@ -44,6 +44,12 @@ Die Teile muessen wie folgt geaendert werden:
 Beim Durchmesser hatte Kuehling 0.2mm mehr Luft gegeben - das uebertrage
 ich so auf die RJMPs.
 
+Unter
+
+    mods/MD
+
+sind die geaenderten Teile abgelegt.
+
 ### Weitere Teile
 
 Die Endstops kommen von Aleph Objects:

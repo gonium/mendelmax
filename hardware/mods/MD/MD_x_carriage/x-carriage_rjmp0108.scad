@@ -1,4 +1,5 @@
-// Jonas Kühling <mail@jonaskuehling.de>
+// Mathias Dalheimer: RJMP-01-08 X Carriage design
+// based on X_carriage by Jonas Kühling <mail@jonaskuehling.de>
 // Derivate of http://www.thingiverse.com/thing:16208
 // - Reinforced frame
 // - Added two fan/equipment mounts
@@ -19,8 +20,10 @@
 include <configuration.scad>
 
 // jonaskuehling's slim LM8UU Holder
-include <lm8uu-holder-slim.scad>
+//include <rjmp0108-holder-slim.scad>
 
+
+include <../MD-RJMP-01-08-parametric/rjmp-01-08-holder-slim_v0.1.scad>
 
 belt_clamp_thickness=2; 
 belt_clamp_width=m3_diameter+3*belt_clamp_thickness+2;
@@ -80,7 +83,7 @@ module simonkuehling_x_carriage()
 
 		// Hotend Hole	
 		translate([0,0,-1])
-		cylinder(r=21,h=lm8uu_support_thickness*2+2);
+		cylinder(r=21,h=rjmp0108_support_thickness*2+2);
 
 		// Substract Belt Clamp Holes from base plate
 		for (i=[-1,1])
@@ -98,11 +101,11 @@ module simonkuehling_x_carriage()
 		translate([25,i*(28),0])
 		render()
 		rotate([0,0,180])
-		lm8uu_holder();
+		rjmp0108_holder();
 
 		translate([-25,i*28,0])
 		render()
-		lm8uu_holder();				
+		rjmp0108_holder();				
 	}
 
 	// Belt Clamp Sockets
@@ -130,16 +133,16 @@ module simonkuehling_x_carriage()
 
 
 clearance=0.7;
-lm8uu_diameter=15+clearance;
-lm8uu_length=24+clearance;
-lm8uu_support_thickness=3.2; 
-lm8uu_end_diameter=m8_diameter+1.5;
+rjmp0108_diameter=16+clearance;
+rjmp0108_length=25+clearance;
+rjmp0108_support_thickness=3.2; 
+rjmp0108_end_diameter=m8_diameter+1.5;
 
-lm8uu_holder_width=lm8uu_diameter+2*lm8uu_support_thickness;
-lm8uu_holder_length=lm8uu_length+2*lm8uu_support_thickness;
-lm8uu_holder_height=lm8uu_diameter*0.75+lm8uu_support_thickness;
+rjmp0108_holder_width=rjmp0108_diameter+2*rjmp0108_support_thickness;
+rjmp0108_holder_length=rjmp0108_length+2*rjmp0108_support_thickness;
+rjmp0108_holder_height=rjmp0108_diameter*0.75+rjmp0108_support_thickness;
 
-lm8uu_holder_gap=(lm8uu_holder_length-6*lm8uu_support_thickness)/2;
+rjmp0108_holder_gap=(rjmp0108_holder_length-6*rjmp0108_support_thickness)/2;
 
 screw_hole_r=4/2;
 
