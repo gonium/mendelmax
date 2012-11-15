@@ -1,15 +1,16 @@
-// LM8UU holder slim v1.1
-// *********************************************
-// Jonas Kühling
-// http://www.jonaskuehling.de
-// http://www.thingiverse.com/jonaskuehling
-// *********************************************
+// RJMP-01-08 holder slim v0.1
+// Mathias Dalheimer
 // derived from:
+// RJMP0108 holder slim v1.1 of Jonas Kühling
 // http://www.thingiverse.com/thing:14942
 
-// LM8UU/rod dimensions
-LM8UU_dia = 15.2;
-LM8UU_length = 24;
+// TEST - uncomment to render in openscad:
+//rjmp0108_holder(1);		// WITH mountplate
+//rjmp0108_holder();		// WITHOUT mountplate
+
+// RJMP0108/rod dimensions
+RJMP0108_dia = 16.2;
+RJMP0108_length = 25;
 rod_dia = 8;
 
 //screw/nut dimensions (M3) - hexagon socket head cap screw ISO 4762, hexagon nut ISO 4032
@@ -29,19 +30,16 @@ nut_surround_thickness = 2;
 
 // main body dimensions
 body_wall_thickness = 2;
-body_width = LM8UU_dia + (2*body_wall_thickness);
+body_width = RJMP0108_dia + (2*body_wall_thickness);
 body_height = body_width;
-body_length = LM8UU_length;
+body_length = RJMP0108_length;
 gap_width = rod_dia + 2;
 screw_bushing_space = 1;
-screw_elevation = LM8UU_dia + body_wall_thickness + (screw_thread_dia/2) +screw_bushing_space;
-
-// TEST - uncomment to render in openscad:
-// lm8uu_holder(1);		// WITH mountplate
-// lm8uu_holder();		// WITHOUT mountplate
+screw_elevation = RJMP0108_dia + body_wall_thickness + (screw_thread_dia/2) +screw_bushing_space;
 
 
-// nophead's polyhole module for better lm8uu-fit
+
+// nophead's polyhole module for better rjmp0108-fit
 module polyhole(d,h) {
     n = max(round(2 * d),3);
     rotate([0,0,180])
@@ -63,7 +61,7 @@ module mount_plate()
 }
 
 // main body
-module lm8uu_holder(with_mountplate=false)
+module rjmp0108_holder(with_mountplate=false)
 {
 	difference()
 	{
@@ -75,15 +73,15 @@ module lm8uu_holder(with_mountplate=false)
 			// body
 			translate([0,0,body_height/4])
 				cube([body_width,body_length,body_height/2], center=true);
-			translate([0,0,(LM8UU_dia/2)+body_wall_thickness])		
+			translate([0,0,(RJMP0108_dia/2)+body_wall_thickness])		
 				rotate([90,0,0])
-					cylinder(r=(LM8UU_dia/2)+body_wall_thickness, h=LM8UU_length, center=true);
+					cylinder(r=(RJMP0108_dia/2)+body_wall_thickness, h=RJMP0108_length, center=true);
 	
 			// gap support
 			translate([-(gap_width/2)-body_wall_thickness,-(body_length/2),body_height/2])
-				cube([body_wall_thickness,LM8UU_length,(LM8UU_dia/2)+screw_bushing_space+(screw_thread_dia/2)]);
+				cube([body_wall_thickness,RJMP0108_length,(RJMP0108_dia/2)+screw_bushing_space+(screw_thread_dia/2)]);
 			translate([gap_width/2,-(body_length/2),body_height/2])
-				cube([body_wall_thickness,LM8UU_length,(LM8UU_dia/2)+screw_bushing_space+(screw_thread_dia/2)]);
+				cube([body_wall_thickness,RJMP0108_length,(RJMP0108_dia/2)+screw_bushing_space+(screw_thread_dia/2)]);
 	
 	
 			// nut trap surround
@@ -102,14 +100,14 @@ module lm8uu_holder(with_mountplate=false)
 		}
 	
 		// bushing hole
-		translate([0,0,LM8UU_dia/2+2])
+		translate([0,0,RJMP0108_dia/2+2])
 			rotate([90,0,0])
-//				cylinder(r=LM8UU_dia/2, h=LM8UU_length+1, center=true);
-				translate([0,0,-(LM8UU_length+1)/2]) polyhole(LM8UU_dia,LM8UU_length+1);	// TESTING POLYHOLE MODULE FOR BETTER LM8UU FIT
+//				cylinder(r=RJMP0108_dia/2, h=RJMP0108_length+1, center=true);
+				translate([0,0,-(RJMP0108_length+1)/2]) polyhole(RJMP0108_dia,RJMP0108_length+1);	// TESTING POLYHOLE MODULE FOR BETTER RJMP0108 FIT
 	
 		// top gap
 		translate([-(gap_width/2),-(body_length/2)-1,body_height/2])
-			cube([gap_width,LM8UU_length+2,(LM8UU_dia/2)+screw_bushing_space+(screw_thread_dia/2)+(nut_dia/2)+nut_surround_thickness+1]);
+			cube([gap_width,RJMP0108_length+2,(RJMP0108_dia/2)+screw_bushing_space+(screw_thread_dia/2)+(nut_dia/2)+nut_surround_thickness+1]);
 	
 		// screw hole (one all the way through)
 		translate([0,0,screw_elevation])
