@@ -55,3 +55,36 @@ sind die geaenderten Teile abgelegt.
 Die Endstops kommen von Aleph Objects:
 http://www.thingiverse.com/thing:17729
 
+
+## Zu druckende Teile
+
+Die folgenden Teile müssen für den Mendelmax tatsächlich gedruckt
+werden:
+
+Offizielle MM1.0-Teile:
+4x    LowerVertex_4_off.stl
+4x    LowerVertex_Mittle_4_off.stl
+4x    Top_Vertex_X_4_off.stl
+2x    Top_Vertex_Y_2_off.stl
+4x    Y_Rod_Clasp_4_off.stl
+2x    Y_Rod_Mount_2_off.stl
+
+Modifizierte Teile:
+3x    endstop-3.stl
+1x    x-flag_1.stl
+1x    y-flag_1.stl
+1x    z-flag_1.stl
+1x    Y_Idler_DoubleB_1.stl
+1x    Y_Motor_Mount_1.stl
+2x    Lower_Z_Mount_2.stl
+2x    Upper_Z_Mount_2.stl
+4x    Z_Clamp_4.stl
+
+1x    MD_x-carriage_rjmp0108_1.stl
+1x    MD_x-ends_threadedrod-motor_1.stl
+1x    MD_x-ends_threadedrod-idler_1.stl
+1x    MD_y-carriage_1.stl
+
+Die Jigs im Verzeichnis Jigs drucke ich selbst.
+
+

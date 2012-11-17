@@ -2,7 +2,8 @@ use <jonaskuehling-default.scad>
 include <rjmp0108-holder-slim_double-vertical.scad>
 // RENDER
 // "idler=false" for motor-x-end, "idler=true" for idler-x-end
-assembly(idler=false);
+assembly(idler=true);
+//assembly(idler=false);
 
 // PARAMETERS
 rod_dia = 8;
