@@ -6,20 +6,20 @@
 // ********************************************
 
 // PRUSA Mendel
-// LM8UU-Bearing X-Carriage
+// RJMP0108-Bearing X-Carriage
 // Used for sliding on X axis
 // GNU GPL v2
 // Simon Kühling <mail@simonkuehling.de>
 // Derived from
 //	- "Lm8uu X Carriage with Fan Mount for Prusa Mendel" by Greg Frost
 //	  http://www.thingiverse.com/thing:9869
-//	- "Slim LM8UU Holder Parametric" by Jonas Kühling
+//	- "Slim RJMP0108 Holder Parametric" by Jonas Kühling
 //	  http://www.thingiverse.com/thing:16158
 
 // Gregs configuration file
 include <configuration.scad>
 
-// jonaskuehling's slim LM8UU Holder
+// jonaskuehling's slim RJMP0108 Holder
 //include <rjmp0108-holder-slim.scad>
 
 
@@ -95,7 +95,7 @@ module simonkuehling_x_carriage()
 
 
 
-	// LM8UU Holders
+	// RJMP0108 Holders
 	for(i=[-1,1])
 	{
 		translate([25,i*(28),0])
@@ -117,7 +117,7 @@ module simonkuehling_x_carriage()
 		belt_clamp_socket ();
 
 		// BeltClamp Socket Rod Clearance
-		translate([-25,0,LM8UU_dia/2+body_wall_thickness])
+		translate([-25,0,RJMP0108_dia/2+body_wall_thickness])
 		rotate([90,0,0])
 		cylinder(h=90,r=5,$fs=1,center=true);
 	}
