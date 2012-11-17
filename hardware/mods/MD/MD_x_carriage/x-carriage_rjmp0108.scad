@@ -98,12 +98,18 @@ module simonkuehling_x_carriage()
 	// RJMP0108 Holders
 	for(i=[-1,1])
 	{
-		translate([25,i*(28),0])
+    // Patch MD: Lift holder 2mm up, otherwise, the holder would not be
+    // round.
+		translate([25,i*(28),2])
+		//translate([25,i*(28),0])
 		render()
 		rotate([0,0,180])
 		rjmp0108_holder();
 
-		translate([-25,i*28,0])
+    // Patch MD: Lift holder 2mm up, otherwise, the holder would not be
+    // round.
+		translate([-25,i*28,2])
+		//translate([-25,i*28,0])
 		render()
 		rjmp0108_holder();				
 	}

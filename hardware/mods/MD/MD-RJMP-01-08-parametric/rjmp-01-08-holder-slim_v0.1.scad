@@ -29,7 +29,7 @@ nut_dia = nut_dia_perimeter;
 nut_surround_thickness = 2;
 
 // main body dimensions
-body_wall_thickness = 2;
+body_wall_thickness = 3;
 body_width = RJMP0108_dia + (2*body_wall_thickness);
 body_height = body_width;
 body_length = RJMP0108_length;
