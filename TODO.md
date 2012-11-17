@@ -1,14 +1,5 @@
 ## TODO
 
-### Kaufen
-* Wolle
-
-### Plastikteile
-
-* Dimensionen der IGUS-Lager prüfen
-* Stückliste für den Druck zusammenstellen
-* Drucktermine koordinieren
-
 ### Mechanik
 
 * Gewindestange schneiden
@@ -18,6 +9,5 @@
 ### Elektronik
 
 * Netzteil umbauen
-* Kühlkörper aufkleben
 * Konzept für Anschluss Heatbed
-* Mechanik für Lüfter
+* Mechanik für Lüfterhalterung

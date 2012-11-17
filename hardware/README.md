@@ -69,7 +69,7 @@ Offizielle MM1.0-Teile:
 4x    Y_Rod_Clasp_4_off.stl
 2x    Y_Rod_Mount_2_off.stl
 
-Modifizierte Teile:
+Modifizierte Teile (AlephObjects):
 3x    endstop-3.stl
 1x    x-flag_1.stl
 1x    y-flag_1.stl
@@ -80,6 +80,7 @@ Modifizierte Teile:
 2x    Upper_Z_Mount_2.stl
 4x    Z_Clamp_4.stl
 
+Modifizierte Teile (RJMP-01-08, MD):
 1x    MD_x-carriage_rjmp0108_1.stl
 1x    MD_x-ends_threadedrod-motor_1.stl
 1x    MD_x-ends_threadedrod-idler_1.stl
