@@ -55,6 +55,9 @@ sind die geaenderten Teile abgelegt.
 Die Endstops kommen von Aleph Objects:
 http://www.thingiverse.com/thing:17729
 
+Y belt tensioner:
+http://www.thingiverse.com/thing:10274
+http://www.thingiverse.com/thing:8332 (nur der ram)
 
 ## Zu druckende Teile
 
@@ -86,6 +89,5 @@ Modifizierte Teile (RJMP-01-08, MD):
 1x    MD_x-ends_threadedrod-idler_1.stl
 1x    MD_y-carriage_1.stl
 
-Die Jigs im Verzeichnis Jigs drucke ich selbst.
 
 
